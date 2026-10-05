@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TripLens Privacy Policy</title>
+<style>
+  :root { --bg: #ffffff; --text: #1c1c1e; --muted: #6b6b70; --line: #e5e5ea; --accent: #0a6cff; --card: #f5f6fa; --gold: #c9a24a; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #000000; --text: #f2f2f7; --muted: #a1a1a6; --line: #2c2c2e; --accent: #4a9dff; --card: #1c1c1e; --gold: #f5d58a; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 -apple-system, "Segoe UI", Roboto, system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+  header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  header svg { width: 44px; height: 44px; flex: none; border-radius: 10px; }
+  h1 { font-size: 1.7rem; line-height: 1.2; margin: 0; }
+  h2 { font-size: 1.15rem; margin: 32px 0 8px; }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); font-size: .92rem; }
+  .card { background: var(--card); border-radius: 14px; padding: 4px 18px; margin: 16px 0; }
+  .card ul { padding-left: 20px; }
+  .card li { margin: 10px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  a { color: var(--accent); }
+  .table-wrap { overflow-x: auto; }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <svg viewBox="20 20 68 68" aria-hidden="true"><rect x="20" y="20" width="68" height="68" fill="#1A2954"/><circle cx="54" cy="54" r="25.5" fill="none" stroke="#F5D58A" stroke-width="3"/><circle cx="54" cy="54" r="19.5" fill="none" stroke="#F5D58A" stroke-opacity=".6" stroke-width="1"/><path d="M54 36 60 54H48Z" fill="#F5D58A"/><path d="M54 72 48 54H60Z" fill="#fff" fill-opacity=".9"/><circle cx="54" cy="54" r="3" fill="#1A2954"/></svg>
+  <h1>TripLens Privacy Policy</h1>
+</header>
+<p class="muted">Effective 5 October 2026</p>
+
+<p>TripLens is a prototype Android app that finds the booking confirmations in your email and turns them into trips, a travel passport, day-by-day plans and a walking guide. It is built so that your email stays on your phone: emails are read on the device, and TripLens has no server of its own.</p>
+
+<div class="card">
+<ul>
+  <li><strong>Read-only.</strong> With your permission TripLens reads Gmail. It cannot send, change or delete email, and it never books, buys or pays for anything.</li>
+  <li><strong>On your phone.</strong> Email content is processed on the device, by built-in templates and an AI model that runs on the phone. It is never sent to TripLens or anyone else.</li>
+  <li><strong>No accounts, ads, analytics or tracking.</strong> Nothing about you is sold or shared for advertising.</li>
+  <li><strong>Place lookups only.</strong> Some features look up places, maps and weather online. Those requests carry place names or coordinates, never your email.</li>
+</ul>
+</div>
+
+<h2>1. What TripLens reads</h2>
+<p><strong>Gmail, if you connect it.</strong> TripLens asks Google for read-only access (the <code>gmail.readonly</code> permission). It searches your mailbox for travel-related messages (flights, trains, buses, hotels, restaurant tables, tickets and payment receipts), reads the subject, sender and date of the matches, and reads the content of the ones that look like bookings. It uses this only to find your bookings and payments and build your trips. Your email is not read by people, not used for advertising and not used to train AI models.</p>
+<p><strong>Your location, if you allow it.</strong> TripLens uses your location while the Navigator tab is open, and for the Nearby places widget, to show what is around you, the weather and when to leave for your next booking.</p>
+<p><strong>What you type.</strong> The name printed in your passport, if you add one.</p>
+<p><strong>AI on your phone.</strong> Email text that the built-in templates do not recognise is read by an AI model running on the phone: Google's Gemini Nano through Android AICore where Google offers it, or Google's Gemma model downloaded into the app. The text stays on the phone.</p>
+
+<h2>2. What TripLens keeps on your phone</h2>
+<ul>
+  <li>The trips, bookings and payments it found, the day plans you create, and the places you visit while using the Navigator.</li>
+  <li>A cache of results and of email headers (subject, sender, date), so the same email is not read twice.</li>
+  <li>A scan log of what was checked and why (email subjects and outcomes), for troubleshooting. Full email text is added to it only if you turn on "Log full email text". In this prototype the scan progress is also written to Android's system log on the phone.</li>
+  <li>Your passport name, settings and, if you download it, the AI model file.</li>
+</ul>
+<p>This data is stored in the app's own storage on your phone. It is excluded from cloud backups and device transfers.</p>
+
+<h2>3. Online services and what they receive</h2>
+<div class="table-wrap">
+<table>
+  <tr><th>Service</th><th>Used for</th><th>What is sent</th></tr>
+  <tr><td>Google: Gmail API and Google Play services</td><td>Reading your email with your permission; sign-in; location and place names</td><td>Your access permission and the search terms; email comes back to the phone only</td></tr>
+  <tr><td>OpenStreetMap services (Photon, Overpass)</td><td>Checking that booked places exist; places near you</td><td>Place names, search words, coordinates</td></tr>
+  <tr><td>Wikipedia, Wikivoyage, Wikidata, Wikimedia Commons</td><td>Notable places, city guide listings, facts and photos</td><td>Place names, coordinates</td></tr>
+  <tr><td>Open-Meteo</td><td>Weather and sunset times</td><td>Rounded coordinates</td></tr>
+  <tr><td>Hugging Face</td><td>Downloading the Gemma model, only if you choose to</td><td>A download request</td></tr>
+  <tr><td>Google Places</td><td>Place cards and search, only in builds where it is switched on</td><td>Search words, coordinates</td></tr>
+</table>
+</div>
+<p>Each service handles these requests under its own privacy policy. TripLens does not send them your email, contacts or account details.</p>
+
+<h2>4. Sharing</h2>
+<p>TripLens shares nothing on its own. When you tap Share (for the passport card or the scan log), you choose where it goes. The passport card shows city names, dates and totals only.</p>
+
+<h2>5. Google API Services User Data Policy</h2>
+<p>TripLens's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Gmail data is used only to provide the features you see in TripLens, is not transferred to others, is not used for advertising, and is not read by people.</p>
+
+<h2>6. Your choices</h2>
+<ul>
+  <li><strong>Disconnect Gmail</strong> on the Trips screen revokes TripLens's access. You can also remove it at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+  <li><strong>Start over</strong>, <strong>Clear cache</strong> and <strong>Clear scan log</strong> (Passport → Travel taste) delete what TripLens found and logged.</li>
+  <li><strong>Remove from this phone</strong> (On-device model) deletes the downloaded model.</li>
+  <li>Location access can be turned off in Android settings at any time.</li>
+  <li>Uninstalling TripLens deletes everything it stored.</li>
+</ul>
+
+<h2>7. Security</h2>
+<p>TripLens's data lives in app-private storage protected by Android's app sandbox, and all network requests use HTTPS. Gmail access uses Google's sign-in on the phone; TripLens never sees your Google password.</p>
+
+<h2>8. Children</h2>
+<p>TripLens is not intended for children under 13, or under the age of digital consent where they live.</p>
+
+<h2>9. Changes</h2>
+<p>If this policy changes, the date at the top will change, and significant changes will be shown in the app.</p>
+
+<h2>10. Contact</h2>
+<p>Questions about privacy: <a href="https://github.com/chands">github.com/chands</a>.</p>
+
+<footer class="muted"><a href="index.html">TripLens</a> · <a href="terms.html">Terms of Use</a></footer>
+</main>
+</body>
+</html>
